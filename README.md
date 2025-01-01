@@ -7,3 +7,7 @@ Data were collected using Telegram API and Moscow Exchange API from 26 most popu
 investors, specifically those with the highest number of subscribers. 
 
 Then data were annotated (linked to stock issures (or company's tickers)) using rule-based approach: with Regular Expression and list of company's names ('synonyms', aliases).
+
+Below is the extract from dataset with linked news:
+
+![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/raw_stock_news.png)
