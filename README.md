@@ -43,6 +43,47 @@ the news *Россия ударила по инфраструктуре круп
 
 For now the news for top 2 channels (messages_grigorievspy', 'messages_newssmartlab') were checked and aggregated for baseline model. The distribution of 189 tickers is highly imbalanced. So the data were filtered focusing on the classes that have more than 1.5% representation. The entires with one word were also deleted because these are images with headlines. 
 
-Below is the description of the final dataset used for training the baseline model
+Below is the description of the final dataset used for training the baseline model:
 
+![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/baseline_dataset.png)
 
+![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/baseline_distribution.png)
+
+![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/baseline_text_statistics.png)
+
+Each row represents one message with news and it can be linked to more than one ticker. 
+
+# Model
+
+For now it is one simple model Logistic Regression with a TF-IDF vectorizer. 
+**The metric is F1-macro score.**
+
+The model is fine-tuned through 10-fold cross-validation with GridSearchCV.
+
+Params:
+
+• C: 10
+
+• Penalty: l2
+
+• Solver: saga
+
+The data was preprocessed. The preprocession included the following steps:
+
+1. Delete irrelevant information: This involves removing tags (preventing
+information leakage) and html links, stopwords (function words and
+words common and specific to telegram channels) and punctuation marks
+(while keeping hyphens inside words).
+3. Remove multiple spaces. 
+4. Substitute ’ё’ for ’е’.
+5. Substitute all numbers with ’1’
+
+**The metric is F1-macro score.**
+
+# Results
+
+![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/baseline_model.png)
+
+# Author
+
+**Chernaya Anastasia** - [Telegram](https://t.me/ChernayaAnastasia), [GitHub](https://github.com/ChernayaAnastasia)
