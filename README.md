@@ -84,6 +84,8 @@ words common and specific to telegram channels) and punctuation marks
 
 ![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/baseline_model.png)
 
+![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/baseline_model_example.png)
+
 # Author
 
 **Chernaya Anastasia** - [Telegram](https://t.me/ChernayaAnastasia), [GitHub](https://github.com/ChernayaAnastasia)
