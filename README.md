@@ -89,3 +89,7 @@ words common and specific to telegram channels) and punctuation marks
 # Author
 
 **Chernaya Anastasia** - [Telegram](https://t.me/ChernayaAnastasia), [GitHub](https://github.com/ChernayaAnastasia)
+
+# Links
+[Report](https://drive.google.com/file/d/1-ImMnK1dKLTdvboOSXVte_eFUAKXgFYw/view?usp=sharing)
+
