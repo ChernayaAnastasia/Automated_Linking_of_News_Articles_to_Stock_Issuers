@@ -84,6 +84,9 @@ words common and specific to telegram channels) and punctuation marks
 
 ![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/baseline_model.png)
 
+
+### Predicting Stock Tickers from News Text Using a Pre-trained Model:
+
 ![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/example_baseline.png)
 
 # Author
