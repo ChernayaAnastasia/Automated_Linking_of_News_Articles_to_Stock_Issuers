@@ -17,7 +17,7 @@ The table of aliases:
 ![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/aliases.png)
 
 For 189 companies there are 728 entries in the table. Some aliases were marked as *strong* meaning that a link between the news and the
-company based on such an alias is considered reliable (most strong entries were the companies’ tickers). From more than 500,000 news articles, approximately 202,000 associations were identified. The resulting annotation created using rules was refined through text data analysis in pandas. EDA reveals the limitations of the rule-based approach. Some of them are below:
+company based on such an alias is considered reliable (most strong entries were the companies’ tickers). From more than 500,000 news messages, 284,041 associations were identified. The resulting annotation created using rules was refined through exploratory data analysis in Pandas. Data analysis reveals the limitations of the rule-based approach. Some of them are below:
 
 * false positives of regular expressions in links, e.g. MOEX ticker in every news with the link to Moscow Exchange site
   
