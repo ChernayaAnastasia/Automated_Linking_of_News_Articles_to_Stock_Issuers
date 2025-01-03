@@ -14,7 +14,12 @@ Below is the extract from dataset with linked news:
 
 The table of aliases:
 
-![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/aliases.png)
+| Index | secid | search_string | is_strong |
+|-------|-------|---------------|-----------|
+| 149   | GAZP  | ГАЗПРОМ       | 0         |
+| 150   | GAZP  | Gazprom       | 0         |
+| 151   | GAZP  | GAZP          | 1         |
+
 
 For 189 companies there are 728 entries in the table. Some aliases were marked as *strong* meaning that a link between the news and the
 company based on such an alias is considered reliable (most strong entries were the companies’ tickers). From more than 500,000 news messages, 284,041 associations were identified. The resulting annotation created using rules was refined through exploratory data analysis in Pandas. Data analysis reveals the limitations of the rule-based approach. Some of them are below:
@@ -49,7 +54,12 @@ Below is the description of the final dataset used for training the baseline mod
 
 ![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/baseline_distribution.png)
 
-![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/baseline_text_statistics.png)
+| Split        | Number of Docs in Corpus | Number of Tokens | Size of Vocabulary |
+|--------------|--------------------------|------------------|--------------------|
+| Train        | 25368                    | 588295           | 21169             |
+| Validation   | 6342                     | 147493           | 9582              |
+| Test         | 7928                     | 180730           | 10087             |
+
 
 Each row represents one message with news and it can be linked to more than one ticker. 
 
@@ -82,7 +92,43 @@ words common and specific to telegram channels) and punctuation marks
 
 # Results
 
-![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/baseline_model.png)
+| Label | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| AFKS  | 1.00      | 0.96   | 0.98     | 465     |
+| AFLT  | 1.00      | 0.93   | 0.96     | 348     |
+| ASTR  | 1.00      | 0.94   | 0.97     | 259     |
+| CHMF  | 1.00      | 0.84   | 0.92     | 245     |
+| FESH  | 1.00      | 0.98   | 0.99     | 705     |
+| GAZP  | 0.96      | 0.90   | 0.93     | 657     |
+| LKOХ  | 0.98      | 0.74   | 0.84     | 258     |
+| LSRG  | 1.00      | 0.93   | 0.96     | 522     |
+| MAGN  | 1.00      | 0.88   | 0.93     | 235     |
+| MOEX  | 0.98      | 0.88   | 0.93     | 272     |
+| MVID  | 1.00      | 0.94   | 0.97     | 250     |
+| NVTK  | 0.92      | 0.78   | 0.84     | 285     |
+| PIKK  | 1.00      | 0.82   | 0.90     | 252     |
+| PLZL  | 1.00      | 0.85   | 0.92     | 221     |
+| POSI  | 0.99      | 0.96   | 0.97     | 236     |
+| RNFT  | 1.00      | 0.98   | 0.99     | 655     |
+| ROSN  | 0.95      | 0.81   | 0.87     | 367     |
+| RTKM  | 1.00      | 0.96   | 0.98     | 255     |
+| RUAL  | 1.00      | 0.89   | 0.94     | 275     |
+| SBER  | 0.97      | 0.80   | 0.88     | 304     |
+| SFIN  | 1.00      | 0.95   | 0.97     | 312     |
+| SNGS  | 1.00      | 0.94   | 0.97     | 233     |
+| VTBR  | 0.97      | 0.85   | 0.91     | 306     |
+| YNDX  | 0.99      | 0.87   | 0.93     | 291     |
+
+| Average        | Precision | Recall | F1-Score | Support |
+|----------------|-----------|--------|----------|---------|
+| Micro Avg      | 0.99      | 0.90   | 0.94     | 8206    |
+| Macro Avg      | 0.99      | 0.89   | 0.93     | 8206    |
+| Weighted Avg   | 0.99      | 0.90   | 0.94     | 8206    |
+| Samples Avg    | 0.92      | 0.92   | 0.92     | 8206    |
+
+| Model              | Vectorizer | F1 Macro Score | Predicting Time |
+|--------------------|------------|----------------|-----------------|
+| LogisticRegression | Tf-idf     | 0.934          | 0.54122 s       |
 
 
 ### Predicting Stock Tickers from News Text Using a Pre-trained Model:
