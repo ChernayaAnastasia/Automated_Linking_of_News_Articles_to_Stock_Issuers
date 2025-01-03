@@ -19,11 +19,11 @@ The table of aliases:
 For 189 companies there are 728 entries in the table. Some aliases were marked as *strong* meaning that a link between the news and the
 company based on such an alias is considered reliable (most strong entries were the companies’ tickers). From more than 500,000 news articles, approximately 202,000 associations were identified. The resulting annotation created using rules was refined through text data analysis in pandas. EDA reveals the limitations of the rule-based approach. Some of them are below:
 
-* false positives of regular expressions in links, e.g. MOEX ticker in every news with the link to MOEX site
+* false positives of regular expressions in links, e.g. MOEX ticker in every news with the link to Moscow Exchange site
   
 * false posities in cases where a company was mentioned only as a source of information and had no further connection to the news, e.g:
   
-the news * МНЕНИЕ: Лукойл хорошо заработал на дорогой нефти. Цель 5000 руб - Тинькофф* gets the ticker of Tinkoff bank
+the news *МНЕНИЕ: Лукойл хорошо заработал на дорогой нефти. Цель 5000 руб - Тинькофф* gets the ticker of Tinkoff bank
 
 * homonymous company names
   
@@ -56,7 +56,7 @@ Each row represents one message with news and it can be linked to more than one 
 # Model
 
 For now it is one simple model Logistic Regression with a TF-IDF vectorizer. 
-**The metric is F1-macro score.**
+We wrap LogisticRegression in MultiOutputClassifier when performing multi-label classification, where each instance can belong to multiple classes independently.
 
 The model is fine-tuned through 10-fold cross-validation with GridSearchCV.
 
