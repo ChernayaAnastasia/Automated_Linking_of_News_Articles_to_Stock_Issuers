@@ -50,7 +50,14 @@ For now the news for top 2 channels (messages_grigorievspy', 'messages_newssmart
 
 Below is the description of the final dataset used for training the baseline model:
 
-![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/baseline_dataset.png)
+| Description                   | Values            |
+|-------------------------------|-------------------|
+| Number of news                | 39638            |
+| Number of tickers             | 24               |
+| Number of telegram channels   | 2                |
+| The earliest datetime value   | 2021-03-29 15:31:02 |
+| The latest datetime value     | 2024-06-12 10:23:30 |
+
 
 ![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/baseline_distribution.png)
 
@@ -131,7 +138,7 @@ words common and specific to telegram channels) and punctuation marks
 | LogisticRegression | Tf-idf     | 0.934          | 0.54122 s       |
 
 
-### Predicting Stock Tickers from News Text Using a Pre-trained Model:
+#### Predicting Stock Tickers from News Text Using a Pre-trained Model:
 
 ![](https://github.com/ChernayaAnastasia/Screenshots/blob/master/example_baseline.png)
 
