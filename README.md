@@ -6,7 +6,7 @@ This project focuses on automatically linking news from Telegram channels to sto
 Data were collected using Telegram API and Moscow Exchange API from 26 most popular Telegram channels aimed at
 investors, specifically those with the highest number of subscribers. 
 
-Then data were annotated (linked to stock issures (or company's tickers)) using rule-based approach: with Regular Expression and list of company's names ('synonyms' or aliases).
+Then data were annotated (linked to stock issures or company's tickers) using rule-based approach: with Regular Expression and list of company's names ('synonyms' or aliases).
 
 Below is the extract from dataset with linked news:
 
@@ -21,7 +21,7 @@ The table of aliases:
 | 151   | GAZP  | GAZP          | 1         |
 
 
-For 189 companies there are 728 entries in the table. Some aliases were marked as *strong* meaning that a link between the news and the
+For 190 companies there are 728 entries in the table. Some aliases were marked as *strong* meaning that a link between the news and the
 company based on such an alias is considered reliable (most strong entries were the companies’ tickers). From more than 500,000 news messages, 284,041 associations were identified. The resulting annotation created using rules was refined through exploratory data analysis in Pandas. Data analysis reveals the limitations of the rule-based approach. Some of them are below:
 
 * false positives of regular expressions in links, e.g. MOEX ticker in every news with the link to Moscow Exchange site
