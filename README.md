@@ -46,7 +46,7 @@ the news *Россия ударила по инфраструктуре круп
   
 *Банки в феврале увеличили выдачу ипотеки в 1,5 раза, в 2023г, объем продаж может превысить 5 трлн руб. - ВТБ* (construction companies such as LSR Group, Samolet, and PIK are related to this news because they are key players in the real estate market)
 
-For now the news for top 2 channels (messages_grigorievspy', 'messages_newssmartlab') were checked and aggregated for baseline model. The distribution of 189 tickers is highly imbalanced. So the data were filtered focusing on the classes that have more than 1.5% representation. These are **24** classes (tickers). The entires with one word were also deleted because these are mostly images with short headlines with tickers. 
+For now the news for top 2 channels (messages_grigorievspy', 'messages_newssmartlab') were checked and aggregated for baseline model. The distribution of 190 tickers is highly imbalanced. So the data were filtered focusing on the classes that have more than 1.5% representation. These are **24** classes (tickers). The entires with one word were also deleted because these are mostly images with short headlines with tickers. 
 
 Below is the description of the final dataset used for training the baseline model:
 
